@@ -1,11 +1,15 @@
 import React from 'react';
 
-function App() {
+import InputBoxes from './components/InputBoxes';
+
+const App = () => {
   return (
     <div>
-      Hmmmm
+      <InputBoxes/>
     </div>
   );
 }
+
+
 
 export default App;
