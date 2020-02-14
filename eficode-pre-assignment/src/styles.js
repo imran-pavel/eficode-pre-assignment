@@ -1,21 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles({
-  inputBoxes: {
+  trips: {
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    margin: 20
+    flexDirection: 'column',
+    alignItems: 'center'
   },
-  inputBox: {
+  tableContainer: {
     margin: 20,
-    width: 300,
-    background: 'white',
-    borderRadius: 10
-  },
-  buttonContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center'
+    width: '90%'
   }
 });

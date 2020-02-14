@@ -86,47 +86,47 @@ export const GET_ROUTE = gql`
 export const BUS_NAMES = gql`
 query {
 
-  "HSL:31M2:0:01": pattern(id: "HSL:31M2:0:01") {
+  HSL_31M2_0_01: pattern(id: "HSL:31M2:0:01") {
     name
   }
 
-  "HSL:31M1:0:01": pattern(id: "HSL:31M1:0:01") {
+  HSL_31M1_0_01: pattern(id: "HSL:31M1:0:01") {
     name
   }
 
-  "HSL:1088B:0:01": pattern(id: "HSL:1088B:0:01") {
+  HSL_1088B_0_01: pattern(id: "HSL:1088B:0:01") {
     name
   }
 
-  "HSL:1088:0:01": pattern(id: "HSL:1088:0:01") {
+  HSL_1088_0_01: pattern(id: "HSL:1088:0:01") {
     name
   }
 
-  "HSL:31M2:0:01": pattern(id: "HSL:31M2:0:01") {
+  HSL_31M2_0_01: pattern(id: "HSL:31M2:0:01") {
     name
   }
 
-  "HSL:31M1:0:01": pattern(id: "HSL:31M1:0:01") {
+  HSL_31M1_0_01: pattern(id: "HSL:31M1:0:01") {
     name
   }
 
-  "HSL:1084:0:01": pattern(id: "HSL:1084:0:01") {
+  HSL_1084_0_01: pattern(id: "HSL:1084:0:01") {
     name
   }
 
-  "HSL:31M2:0:01": pattern(id: "HSL:31M2:0:01") {
+  HSL_31M2_0_01: pattern(id: "HSL:31M2:0:01") {
     name
   }
 
-  "HSL:31M1:0:01": pattern(id: "HSL:31M1:0:01") {
+  HSL_31M1_0_01: pattern(id: "HSL:31M1:0:01") {
     name
   }
 
-  "HSL:1085:0:01": pattern(id: "HSL:1085:0:01") {
+  HSL_1085_0_01: pattern(id: "HSL:1085:0:01") {
     name
   }
 
-  "HSL:1086:0:01": pattern(id: "HSL:1086:0:01") {
+  HSL_1086_0_01: pattern(id: "HSL:1086:0:01") {
     name
   }
 
