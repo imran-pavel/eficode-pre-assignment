@@ -7,11 +7,14 @@ import {
   Table,
   TableHead,
   TableBody,
-  TableRow,
-  TableCell
+  TableRow
 } from '@material-ui/core';
 
 import { useStyles } from './../styles';
+import {
+  StyledTableCell,
+  StyledTableRow
+} from './../styles';
 
 
 
@@ -26,21 +29,15 @@ const Trip = ( { legs } ) => {
     
     return (
       <TableRow key={uuid.v4()}>
-        <TableCell>
-            <div>
-              <p>{ leg.mode }</p>
-            </div>
-          </TableCell>
-          <TableCell>
-            <div>
-              <p>{ leg.from.name }</p>
-            </div>
-          </TableCell>
-          <TableCell>
-            <div>
-              <p>{ leg.to.name }</p>
-            </div>
-          </TableCell>
+        <StyledTableCell>
+          <p>{ leg.mode }</p>
+        </StyledTableCell>
+        <StyledTableCell>
+          <p>{ leg.from.name }</p>
+        </StyledTableCell>
+        <StyledTableCell>
+          <p>{ leg.to.name }</p>
+        </StyledTableCell>
       </TableRow>
     );
   });
@@ -48,13 +45,19 @@ const Trip = ( { legs } ) => {
 
   return (
     <TableContainer component={Paper} className={classes.tableContainer}>
-      <Table>
+      <Table className={classes.table}>
         <TableHead>
-          <TableRow>
-            <TableCell>Mode</TableCell>
-            <TableCell>From</TableCell>
-            <TableCell>To</TableCell>
-          </TableRow>
+          <StyledTableRow>
+            <StyledTableCell>
+              <p>Mode</p>
+            </StyledTableCell>
+            <StyledTableCell>
+              <p>From</p>
+            </StyledTableCell>
+            <StyledTableCell>
+              <p>To</p>
+            </StyledTableCell>
+          </StyledTableRow>
         </TableHead>
         <TableBody>
           {

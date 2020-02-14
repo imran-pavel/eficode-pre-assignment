@@ -1,4 +1,5 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { TableCell, TableRow } from '@material-ui/core';
 
 export const useStyles = makeStyles({
   trips: {
@@ -8,6 +9,33 @@ export const useStyles = makeStyles({
   },
   tableContainer: {
     margin: 20,
-    width: '90%'
+    width: '75%'
+  },
+  table: {
+    backgroundColor: 'rgb(255, 240, 174)'
   }
 });
+
+export const StyledTableCell = withStyles(theme => ({
+  head: {
+    backgroundColor: 'rgb(182, 170, 114)',
+    color: 'white',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
+  body: {
+    textAlign: 'center',
+    fontSize: 15
+  },
+}))(TableCell);
+
+
+
+export const StyledTableRow = withStyles(theme => ({
+  root: {
+    '&:nth-of-type(odd)': {
+      backgroundColor: 'rgb(216, 202, 140)',
+    },
+  },
+}))(TableRow);
