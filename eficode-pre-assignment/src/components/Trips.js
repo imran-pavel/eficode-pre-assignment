@@ -9,6 +9,7 @@ import {
   AAKENRAITTI_LAT_LON
 } from './../queries';
 import Trip from './Trip';
+import uuid from 'uuid';
 
 const Trips = (props) => {
   const getRouteResult = useQuery(GET_ROUTE, {
@@ -30,9 +31,7 @@ const Trips = (props) => {
     return routes.map((route) => {
       console.log('route', route);
       return (
-        <>
-          <Trip legs={route.legs}/>
-        </>
+        <Trip key={uuid.v4()} legs={route.legs}/>
       );
     });
   }
