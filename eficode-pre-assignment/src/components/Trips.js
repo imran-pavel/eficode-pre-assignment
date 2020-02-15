@@ -4,7 +4,7 @@ import { CircularProgress } from '@material-ui/core';
 
 import {
   GET_ROUTE,
-  BUS_NAMES,
+  TRANSPORT_OPTIONS,
   EFICODE_LAT_LON,
   AAKENRAITTI_LAT_LON
 } from './../queries';
@@ -20,18 +20,14 @@ const Trips = (props) => {
       toLon: AAKENRAITTI_LAT_LON.lon
     }
   });
-  const getBusNames = useQuery(BUS_NAMES);
+  const transPortNumbers = useQuery(TRANSPORT_OPTIONS);
 
-  if(getRouteResult.loading || getBusNames.loading) return <CircularProgress style={{color: '#b2dfdb'}}/>
-  console.log('Result', getRouteResult.data);
-  console.log('Bus Names', getBusNames.data);
+  if(getRouteResult.loading || transPortNumbers.loading) return <CircularProgress style={{color: '#b2dfdb'}}/>
   let routes = getRouteResult.data.plan.itineraries;
-  console.log(routes);
   if(routes) {
     return routes.map((route) => {
-      console.log('route', route);
       return (
-        <Trip key={uuid.v4()} legs={route.legs}/>
+        <Trip key={uuid.v4()} legs={route.legs} transPortNumbers={transPortNumbers.data}/>
       );
     });
   }

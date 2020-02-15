@@ -83,7 +83,7 @@ export const GET_ROUTE = gql`
     }
 }`;
 
-export const BUS_NAMES = gql`
+export const TRANSPORT_OPTIONS = gql`
 query {
 
   HSL_31M2_0_01: pattern(id: "HSL:31M2:0:01") {
