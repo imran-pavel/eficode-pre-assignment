@@ -10,8 +10,8 @@ const App = () => {
   
   return (
     <div className={classes.trips}>
-      <h1>
-        Travel Route Options from { EFICODE_LAT_LON.name } to { AAKENRAITTI_LAT_LON.name }
+      <h1 style={{color: '#40682F'}}>
+        { EFICODE_LAT_LON.name } => { AAKENRAITTI_LAT_LON.name }
       </h1>
       <Trips/>
     </div>

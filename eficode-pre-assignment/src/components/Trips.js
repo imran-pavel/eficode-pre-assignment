@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { CircularProgress } from '@material-ui/core';
+import uuid from 'uuid';
 
 import {
   GET_ROUTE,
@@ -9,7 +10,7 @@ import {
   AAKENRAITTI_LAT_LON
 } from './../queries';
 import Trip from './Trip';
-import uuid from 'uuid';
+
 
 const Trips = (props) => {
   const getRouteResult = useQuery(GET_ROUTE, {
@@ -22,7 +23,7 @@ const Trips = (props) => {
   });
   const transPortNumbers = useQuery(TRANSPORT_OPTIONS);
 
-  if(getRouteResult.loading || transPortNumbers.loading) return <CircularProgress style={{color: '#b2dfdb'}}/>
+  if(getRouteResult.loading || transPortNumbers.loading) return <CircularProgress style={{color: '#17A589'}}/>
   let routes = getRouteResult.data.plan.itineraries;
   if(routes) {
     return routes.map((route) => {

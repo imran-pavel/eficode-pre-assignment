@@ -5,11 +5,13 @@ export const useStyles = makeStyles({
   trips: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 50
   },
   tableContainer: {
     margin: 20,
-    width: '75%'
+    width: '70%'
   },
   table: {
     backgroundColor: 'rgb(255, 240, 174)'
