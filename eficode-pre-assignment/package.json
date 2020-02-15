@@ -2,6 +2,7 @@
   "name": "eficode-pre-assignment",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://duniarbalchal.dev/eficode2020",
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
     "@material-ui/core": "^4.9.2",
