@@ -17,9 +17,7 @@ const App = () => {
       <Route exact path='/eficode2020' render={() => {
         return (
           <div className={classes.trips}>
-            <h1 style={{color: '#40682F'}}>
-              { EFICODE_LAT_LON.name } => { AAKENRAITTI_LAT_LON.name }
-            </h1>
+            <p className={classes.title}>{ EFICODE_LAT_LON.name } => { AAKENRAITTI_LAT_LON.name }</p>
             <Trips/>
           </div>
         );

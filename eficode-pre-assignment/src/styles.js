@@ -1,7 +1,7 @@
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { TableCell, TableRow } from '@material-ui/core';
 
-export const useStyles = makeStyles({
+export const useStyles = makeStyles(theme => ({
   trips: {
     display: 'flex',
     flexDirection: 'column',
@@ -15,8 +15,24 @@ export const useStyles = makeStyles({
   },
   table: {
     backgroundColor: 'rgb(255, 240, 174)'
+  },
+  title: {
+    color: 'white',
+    fontSize: 40,
+    fontWeight: 'bold',
+    padding: 10,
+    backgroundColor: 'black',
+    borderRadius: 5
+  },
+  [theme.breakpoints.down(415)]: {
+    tableContainer: {
+      width: '95%'
+    },
+    title: {
+      fontSize: 20
+    }
   }
-});
+}));
 
 export const StyledTableCell = withStyles(theme => ({
   head: {
@@ -30,6 +46,11 @@ export const StyledTableCell = withStyles(theme => ({
     textAlign: 'center',
     fontSize: 15
   },
+  [theme.breakpoints.down(415)]: {
+    body: {
+      fontSize: 12
+    }
+  }
 }))(TableCell);
 
 
